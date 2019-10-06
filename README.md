@@ -9,7 +9,7 @@ The final image uses a "scratch" image as base and exposes the built library in 
 ### In your Dockerfile
 Just use multistage Docker builds:
 ```dockerfile
-FROM github.com/mattiamari/docker-tdlib as build-tdlib
+FROM mattiamari/docker-tdlib as build-tdlib
 
 FROM ubuntu:latest
 COPY --from=build-tdlib /tdlib/ /usr/local/
